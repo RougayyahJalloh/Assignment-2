@@ -1,0 +1,30 @@
+void setup() {
+  size(600, 600);
+  background(255);
+}
+
+void draw () {
+  stroke(0);
+  textSize(40);
+  fill(108, 200, 300);
+  text("Assignment 2", 150, 100);
+  fill(77, 66, 66);
+  textSize(20);
+  text("By Rougayyah Jalloh", 190, 150);
+  
+  //Creating log-in page for exercises A & B
+  stroke(0);
+  fill(92, 66, 33);
+  rect(250, 230, 200, 40);//Rectangle 1 
+  rect(250, 290, 200, 40);// Recatangle 2 
+ 
+  noStroke();
+  fill(0);
+  textSize(25);
+  text("Username", 90, 255);
+  text("Password", 90, 320);
+} 
+
+/* This is where I'm gonna declare variables and create strngs to add multiple 
+screens for all my exercises. There will be Exercise-Set-A and Exercise -Set-B.
+*/ 
