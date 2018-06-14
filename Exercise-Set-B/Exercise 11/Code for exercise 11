@@ -1,0 +1,161 @@
+String sentence = "Hi friends. How are you? It's nice out. Perfect for walks.";
+String [] words;
+String [] numbersString;
+float [] numbers;
+int fontSize = 24;
+
+
+void settings() {
+  size(600, 600);
+}
+
+void setup() {
+  words = sentence.split(" "); 
+
+
+  textSize(20);
+  background(255);
+  fill(0); 
+  textAlign(CENTER); 
+  text(sentence, 300, 300);
+
+  
+  println("Characteristics of Sentence"); 
+  println("Number of the letter 'i' in the sentence: " + counter(sentence));
+  println("Number of the letter 'e' in the sentence: " + counting(sentence));
+  println("Number of the letter 'a' in the sentence:"  + counts(sentence)); 
+  println ("Number of the letter 'o' in the sentence: " + nums(sentence)); 
+  println("The length (in characters) of the sentence: " + sentence.length()); 
+  println ("Number of punctuations: " + punctuations(sentence)); 
+  println ("Number of words in the sentence: " + words.length); 
+  println ("Number of capitals in the sentence: " + capitals(sentence)); 
+  println ("Number of vowels in the sentence: " + vowels(sentence)); 
+
+println(" "); 
+println(" "); 
+
+  //Number of letters in a specific word
+    println("Characteristics of words in the sentence"); 
+  println ("Number of characters in the word 'Hi': " + words[0].length());
+  println ("Number of characters in the word 'friends': " + (words[1].length()-1));
+  println ("Number of characters in the word 'How': " + words[2].length());
+  println ("Number of characters in the word 'are': " + words[3].length());
+  println ("Number of characters in the word 'you': " + (words[4].length()-1));
+  println ("Number of characters in the word 'It's': " + words[5].length()); 
+  println ("Number of characters in the word 'nice': " + words[6].length());
+  println ("Number of characters in the word 'out': " + (words[7].length()-1));
+  println ("Number of characters in the word 'Perfect': " + words[8].length());
+  println ("Number of characters in the word 'for': " + words[9].length());
+  println ("Number of characters in the word 'walks': " + (words[10].length()-1));
+}
+
+//Counting number of letter I in the sentence
+int counter(String sentence) { 
+  int numberOfLetterI = 0; 
+  char [] goodbye = sentence.toCharArray(); 
+  for (int i = 0; i < goodbye.length; i++) {
+    if (goodbye[i] == 'i' ||goodbye[i] == 'I') {
+      numberOfLetterI +=1;
+    }
+  }
+  return numberOfLetterI;
+}
+
+int counting(String sentence) { 
+  int numberOfLetterE = 0; 
+  char [] goodbye = sentence.toCharArray(); 
+  for (int i = 0; i < goodbye.length; i++) {
+    if (goodbye[i] == 'e' ||goodbye[i] == 'E') {
+
+      numberOfLetterE +=1;
+    }
+  }
+  return numberOfLetterE;
+}
+
+int counts(String sentence) { 
+  int numberOfLetterA = 0; 
+  char [] goodbye = sentence.toCharArray(); 
+  for (int i = 0; i < goodbye.length; i++) {
+    if (goodbye[i] == 'a' ||goodbye[i] == 'A') {
+
+      numberOfLetterA +=1;
+    }
+  }
+  return numberOfLetterA;
+}
+
+int nums(String sentence) { 
+  int numberOfLetterO = 0; 
+  char [] goodbye = sentence.toCharArray(); 
+  for (int i = 0; i < goodbye.length; i++) {
+    if (goodbye[i] == 'o' ||goodbye[i] == 'O') {
+
+      numberOfLetterO +=1;
+    }
+  }
+  return numberOfLetterO;
+}
+
+
+int punctuations(String sentence) { 
+  int numberOfpunctuations = 0; 
+  char [] goodbye = sentence.toCharArray(); 
+  for (int i = 0; i < goodbye.length; i++) {
+    if (goodbye[i] == '.' ||goodbye[i] == '.' || goodbye[i] == '?' ||goodbye[i] == '?' || goodbye[i] == '\'' ||goodbye[i] == '\'' ) {
+
+      numberOfpunctuations +=1;
+    }
+  }
+  return numberOfpunctuations;
+}
+
+
+int capitals (String sentence){  
+int numberOfcapitals = 0; 
+char [] capitalsChars = sentence.toCharArray(); 
+{
+
+  for (int i = 0; i < capitalsChars.length; i++) {
+    if (capitalsChars[i]<91 && capitalsChars[i] > 64) {
+      
+       numberOfcapitals +=1; 
+    }
+  }
+    return numberOfcapitals;
+}}
+
+
+
+int vowels (String sentence){  
+int numberOfvowels = 0; 
+char [] vowelsChars = sentence.toCharArray(); 
+{
+
+  for (int i = 0; i < vowelsChars.length; i++) {
+    if (vowelsChars[i]  == 'a' ||vowelsChars[i] == 'A' || vowelsChars[i]  == 'e' ||vowelsChars[i] == 'E' || vowelsChars[i]  == 'i' ||vowelsChars[i] == 'I' || 
+    vowelsChars[i]  == 'o' ||vowelsChars[i] == 'O' || vowelsChars[i]  == 'u' ||vowelsChars[i] == 'U') {
+      
+       numberOfvowels +=1; 
+    }
+  }
+    return numberOfvowels;
+}}
+
+
+int most (String sentence){  
+int numberOfmost = 0; 
+char [] mostChars = sentence.toCharArray(); 
+{
+
+  for (int i = 0; i < vowelsChars.length; i++) {
+    if (vowelsChars[i]  == 'a' ||vowelsChars[i] == 'A' || vowelsChars[i]  == 'e' ||vowelsChars[i] == 'E' || vowelsChars[i]  == 'i' ||vowelsChars[i] == 'I') {
+      
+       numberOfmost +=1; 
+    }
+  }
+    return numberOfmost;
+}}
+
+
+//SEARCH LISTS 
